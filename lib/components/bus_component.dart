@@ -4,18 +4,16 @@ class BusWidget extends StatefulWidget {
   final String routeNumber;
   final String routeName;
   final String via;
-  final String collegeArrivalTime;
   final List<Map<String, dynamic>> stops;
 
   const BusWidget({
-    Key? key,
+    super.key,
     required this.routeNumber,
     required this.routeName,
     required this.via,
-    required this.collegeArrivalTime,
     required this.stops,
     
-  }) : super(key: key);
+  });
 
   @override
   _BusWidgetState createState() => _BusWidgetState();
@@ -35,7 +33,7 @@ class _BusWidgetState extends State<BusWidget> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
                     Text('Via: ${widget.via}'),
-                    Text('College Arrival Time: ${widget.collegeArrivalTime} AM'),
+                    Text('College Arrival Time: 7.40 AM'),
               ],
           ),
           secondChild: const Text('Tap to view details'),

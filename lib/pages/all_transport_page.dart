@@ -18,6 +18,7 @@ class _AllTransportPageState extends State<AllTransportPage> {
 
   late Future _busRoutesFuture;
 
+  @override
   initState() {
     super.initState();
     _busRoutesFuture = loadBusRoutes();
@@ -28,7 +29,6 @@ class _AllTransportPageState extends State<AllTransportPage> {
     final data = await jsonDecode(busRoutes);
     setState(() {
       _busRoutes = data['bus_route_names'];
-      print('Number of items in busRoutes: ${_busRoutes.length}');
     });
   }
 
@@ -45,7 +45,7 @@ class _AllTransportPageState extends State<AllTransportPage> {
               child: Text('Error: ${snapshot.error}'),
             );
           }
-          else
+          else{
             return ListView.builder(
               itemCount: _busRoutes.length,
               itemBuilder: (context, index) {
@@ -53,11 +53,10 @@ class _AllTransportPageState extends State<AllTransportPage> {
                   routeNumber: _busRoutes[index]['route_number'],
                   routeName: _busRoutes[index]['route_name'],
                   via: _busRoutes[index]['via'],
-                  collegeArrivalTime: _busRoutes[index]['college_arrival_time'],
                   stops: List.from(_busRoutes[index]['stops']),
                 );
               },
-            );
+            );}
         
         },
       )
