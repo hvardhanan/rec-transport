@@ -1,16 +1,18 @@
-# transport_app
+# REC Transport Project
 
-A new Flutter project.
+This repository contains the source code for the REC Transport app.
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+## Steps to Contribute
 
-A few resources to get you started if this is your first Flutter project:
+Fork this repository from your Github account.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Then clone the repository to your local machine. 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Create a new branch with an appropriate branch name.
+
+Make Changes.
+
+Add, Commit and Push.
+
+Once the Pull request has been reviewed, the code will be added to the master repo.
