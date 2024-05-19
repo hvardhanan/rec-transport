@@ -5,7 +5,7 @@ class BusWidget extends StatefulWidget {
   final String routeName;
   final String via;
   final String collegeArrivalTime;
-  final List<Map<String, dynamic>> stops;
+  // final List<Map<String, String>> stops;
 
   const BusWidget({
     Key? key,
@@ -13,7 +13,7 @@ class BusWidget extends StatefulWidget {
     required this.routeName,
     required this.via,
     required this.collegeArrivalTime,
-    required this.stops,
+    // required this.stops,
     
   }) : super(key: key);
 
@@ -34,9 +34,9 @@ class _BusWidgetState extends State<BusWidget> {
           firstChild: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-                    Text('Via: ${widget.via}'),
-                    Text('College Arrival Time: ${widget.collegeArrivalTime} AM'),
-              ],
+              // Text('Stops: Yet to be implemented'),
+              Text('Via: ${widget.via}'),
+            ],
           ),
           secondChild: const Text('Tap to view details'),
           crossFadeState: !isPressed

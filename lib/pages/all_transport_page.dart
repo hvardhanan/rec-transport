@@ -54,7 +54,7 @@ class _AllTransportPageState extends State<AllTransportPage> {
                   routeName: _busRoutes[index]['route_name'],
                   via: _busRoutes[index]['via'],
                   collegeArrivalTime: _busRoutes[index]['college_arrival_time'],
-                  stops: List.from(_busRoutes[index]['stops']),
+                  // stops: List.from(_busRoutes[index]['stops']),
                 );
               },
             );
