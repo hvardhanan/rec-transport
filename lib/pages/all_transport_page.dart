@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:transport_app/components/bus_component.dart';
+import 'package:transport_app/pages/about_page.dart';
 
 class AllTransportPage extends StatefulWidget {
   const AllTransportPage({super.key});
@@ -61,9 +62,10 @@ class _AllTransportPageState extends State<AllTransportPage> {
         onChanged: (query) => _filterBusRoutes(query),
         decoration: const InputDecoration(
           hintText: 'Search Bus Routes or Stops...',
-          border: InputBorder.none,
+          border: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(20))),
+          fillColor: Color(0x808080),
         ),
-        style: const TextStyle(color: Colors.white),
+        style: const TextStyle(color: Colors.black),
         autofocus: true,
       ),
       centerTitle: true,
@@ -148,7 +150,7 @@ class _AllTransportPageState extends State<AllTransportPage> {
       case 3:
         return const Center(child: Text('Select Date Transport'));
       case 4:
-        return const Center(child: Text('About'));
+        return aboutPage();
       default:
         return const Center();
     }
